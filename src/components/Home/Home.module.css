@@ -1,0 +1,206 @@
+.container {
+    position: relative;
+}
+
+h1 {
+    margin-top: 32px;
+}
+
+.sidebarleft {
+    float: left;
+    width: 146px;
+}
+
+.sidebarleft>span {
+    line-height: 146px;
+    font-size: 200px;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    background: linear-gradient(to bottom, #E60000, #FFCC00, #007F00, #0000CC);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 36px;
+}
+
+.content {
+    width: auto;
+    height: calc(100vh - 50px);
+    margin-left: 146px;
+    padding: 0 8px;
+    text-align: center;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.content::-webkit-scrollbar-button {
+    display: none;
+    border-radius: 4px;
+}
+
+.content::-webkit-scrollbar-track-piece {
+    background: transparent;
+    background-color: hsl(0, 0%, 71%, 0.2);
+}
+
+.content::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #b6b6b6;
+}
+
+.content::-webkit-scrollbar-track {
+    box-shadow: transparent;
+}
+
+.content1 {
+    width: auto;
+}
+
+.form_group {
+    margin-top: 32px;
+}
+
+.years,
+.counties,
+.districts {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 12px;
+    position: relative;
+    border: 1px solid #B6B6B6;
+    border-radius: 4px;
+}
+
+.years {
+    width: 73px;
+}
+
+.counties,
+.districts {
+    width: 165px;
+}
+
+.years span,
+.counties span,
+.districts span {
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    background-color: white;
+    font-size: 12px;
+    padding: 0 4px;
+}
+
+.districts span,
+.counties>select,
+.districts>select {
+    color: #B6B6B6;
+}
+
+.years>select,
+.counties>select,
+.districts>select {
+    width: 100%;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("./select.png") no-repeat right center transparent;
+    padding-right: 21px;
+}
+
+.years>select:focus,
+.counties>select:focus,
+.districts>select:focus {
+    outline: none;
+}
+.form_group label select {
+    font-weight: 500;
+}
+label button.cancelselect {
+    width: 12px;
+    height: 12px;
+    background: url("./cancel.png") no-repeat right center transparent;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+    display: none;
+    border: 0;
+}
+
+.form_group>button {
+    height: 36px;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 0%, 0.12);
+    color: hsl(0, 0%, 0%, 0.26);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search_res_hr {
+    margin: 50px 0 42px 0;
+    border-top: 1px solid #C29FFF;
+    text-align: center;
+
+}
+.search_res_hr_div {
+    display: inline-block;
+    position: relative;
+    top: -16px;
+    background-color: #FFFFFF;
+}
+.search_res_hr_div_txt {
+    display: inline-block;
+    width: 78px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 12px;
+    border: 1px solid #B388FF;
+    border-radius: 16px;
+    color: #B388FF;
+    font-size: 13px;
+    font-weight: 500;
+    
+}
+.search_res_hr+h1 {
+    margin-bottom: 48px;
+}
+
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 745px) {
+    .content {
+        padding: 0 8px;
+    }
+    .form_group label {
+        display: block;
+        margin: 16px 0;
+    }
+    .form_group label:not(:first-child) {
+        width: 100%;
+        text-align: left;
+    }
+    .form_group button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 617px) {
+    .content {
+        margin-left: 0;
+    }
+    .sidebarleft {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+    .sidebarleft>span {
+        opacity: 0.12;
+    }
+}
